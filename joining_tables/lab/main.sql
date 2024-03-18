@@ -35,7 +35,9 @@ VALUES
     (11, '2021-11-10', 5, 2, 2),
     (12, '2021-11-10', 3, 2, 4);
 
--- 1 combine the full name and the phone number of each customer from the "customers" table with the related booking date and 'number of guests' from the "bookings" table
+-- 1 
+-- a list of all customers who have made bookings
+-- combine the full name and the phone number of each customer from the "customers" table with the related booking date and 'number of guests' from the "bookings" table
 SELECT
     cus.full_name AS full_name,
     cus.phone_number AS phone_number,
@@ -45,7 +47,8 @@ FROM
     customers AS cus
     INNER JOIN bookings AS bk ON cus.customer_id = bk.customer_id;
 
--- 2 
+-- 2
+-- to view information about all existing customers with bookings that have been made so far
 SELECT
     cus.customer_id AS customer_id,
     bk.booking_id AS booking_id
