@@ -28,7 +28,7 @@
  * 	   RIGHT JOIN table2_name AS tb2 ON tb1.column_name = tb2.column_name;
  * 
  * SELF JOIN
- * - a table is joined with itself to retrieve info that exists in the same table
+ * - a table is joined with itself to compares rows in the table
  * SELECT
  *     tb1.column_name1 AS col1,
  *     tb2.column_name1 AS col2
