@@ -117,6 +117,16 @@ WHERE price >
     WHERE type IN ("Starters", "Desserts")
 );
 
+-- or
+SELECT *
+FROM menu_items
+WHERE price > ALL
+(
+    SELECT price
+    FROM menu_items
+    WHERE type IN ("Starters", "Desserts")
+);
+
 -- task 3. find the menu items that costs the same as the starter menu items that are Italian cuisine
 SELECT *
 FROM menu_items
